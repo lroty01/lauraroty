@@ -9,23 +9,23 @@
     </head>
     <body>            
         <main>
-            <header>
-                <img src="images/plant.png" alt="cute plant icon">
-                <h1>Laura Roty</h1>
-                <p><a href="#">laura@roty.com</a></p>
-                <p><a href="#">480-639-8589</a></p>
-            </header> 
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="thesis.html">Thesis</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="#top">top^</a></li>
-                </ul>
-            </nav> 
+            <div class="container">
+                <header>
+                    <img src="images/plant.png" alt="cute plant icon">
+                    <h1>Laura Roty</h1>
+                </header> 
+                <nav>
+                    <input type="checkbox" id="dropdown">
+                    <label for="dropdown"><span></span></label>
+                    <ul>
+                             <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="thesis.html">Thesis</a></li>
+                    </ul>
+                </nav> 
+            </div>
             <div id="intro">
-                <img src="images/portfoliohero.png" alt="Laura smiling">
+                <img class="circleMain" src="images/profile.png" alt="Laura smiling">
                 <h1>Hi, I'm Laura!</h1>
                 <p>I'm an HSE UX honors ASU alumna. I believe in taking action to accomplish goals bigger than ourselves Learn more about me or see my research!</p>
                 <!-- Button for About -->
@@ -34,43 +34,26 @@
                 </div>
                 <!-- Button for Thesis -->
                 <div id="toThesis">
-                    <a href="thesis.html">See Thesis</a>
+                    <a href="thesis.html">View Project</a>
                 </div>
             </div>
+
                 <!-- Preview Thesis -->
             <div id="preview">
-                <img src="images/ASU Redesign.png" alt="Laura's ASU Class Search Redesign">
-                <h2>Preview</h2>
+                <h2>Preview my Thesis</h2>
                 <h3>ASU Class Search System Redesign</h3>
-                <p>For my Barrett honors thesis project, I aimed to leave a lasting mark on my journey at ASU. To accomplish this, I conducted a thorough user evaluation of the ASU Class Search system.</p>
-                <p><a href="#file:///Users/lauraroty/Documents/git337/lauraroty/index.html#file://C:Users/lauraroty/Documents/git337/lauraroty/thesis.html">See Thesis Research</a></p>
-            </div>
-                <!-- Quick Links -->
-            <div id="quicklinks">
-                <div id="quickThesis">
-                    <img src="images/thesis.png" alt="Portfolio folder with pages">
-                    <h3>Laura's Thesis</h3>
-                    <a href="thesis.html">See Thesis</a>
-                <div id="quickAbout">
-                    <img src="images/about.png" alt="Stick-figure girl with paint bucket and brush">See Research</a>
-                    <h3>More About Laura</h3>
-                    <a href="about.html">See About</a>
-                </div>
-                <div id="quickContact">
-                    <img src="images/contact.png" alt="White Phone Icon with Black Outline">
-                    <h3>Reach Out Laura</h3>
-                    <a href="contact.html">Contact Laura</a>
-                </div>
+                <p>For my Barrett honors thesis project, I aimed to leave a lasting mark on my journey at ASU.</p>
+                <p> To accomplish this, I conducted a thorough user evaluation of the ASU Class Search system.</p>
+                <img src="images/ASU Redesign.png" alt="Laura's ASU Class Search Redesign">
+                <section id="seeThesis">
+                    <a href="#file:///Users/lauraroty/Documents/git337/lauraroty/index.html#file://C:Users/lauraroty/Documents/git337/lauraroty/thesis.html">See Thesis Research</a>
+                </section>
             </div>
         </main>
         <footer>
-            <div id="footercontact">
-                <p><small><a href="#">laura@roty.com</a></small></p>
-                <p><small><a href="#">480-639-8589</a></small></p>
-            </div>
-            <div id="footerlocation">
-                <p><small><a href="#">Tempe, Arizona</a></small></p>
-            </div>
+                <p><small>laura@roty.com</small></p>
+                <p><small>480-639-8589</small></p>
+                <p><small>Tempe, Arizona</small></p>
         </footer>
     </body>
 </html>

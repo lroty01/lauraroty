@@ -3,61 +3,69 @@
     <head>
         <meta charset="utf-8">
         <title>Laura's Portfolio</title>
+        <link rel="icon" type="image/x-icon" href="images/FaviconPlant.ico">
         <meta name="author" content="Laura Roty">
-        <link href="styles.css" rel="stylesheet">
+		<link href="styles.css" rel="stylesheet">
     </head>
     <body>            
         <main>
-            <header>
-                <h1>Laura Roty</h1>
-                <p><a href="#">laura@roty.com</a></p>
-                <p><a href="#">480-639-8589</a></p>
-            </header> 
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="thesis.html">Thesis</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="#top">top^</a></li>
-                </ul>
-            </nav> 
+            <div class="container">
+                <header>
+                    <img src="images/plant.png" alt="cute plant icon">
+                    <h1>Laura Roty</h1>
+                </header> 
+                <nav>
+                    <input type="checkbox" id="dropdown">
+                    <label for="dropdown"><span></span></label>
+                    <ul>
+                             <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="thesis.html">Thesis</a></li>
+                    </ul>
+                </nav> 
+            </div>
             <div id="aboutintro">
                 <h1>About Me:</h1>
                 <p>I’m an upcoming ASU Barrett honors alumna studying human systems engineering, UX. I got exposure to a handful of subjects during my undergraduate. I switched my academic major six times but ultimately fell in love with UX Research.</p>
             </div>
             <div id="about">
                 <div id="seattle">
-                    <img src="images/Seattle.png" alt="Laura smiling in Seattle">
-                    <h1>Laura loves to climb!</h1>
+                    <img class="circle-clip" src="images/Seattle.png" alt="Laura smiling in Seattle">
+                    <h3>Laura loves to travel!</h3>
                     <p>I am a sucker for exploring new places and love to travel, but if I had to pick a favorite city to visit, it would be a tie between Seattle, Washington, and Kona, Hawaii!</p>
                 </div>
                 <div id="hiking">
-                    <img src="images/hiking.png" alt="Laura climbing a tree stump">
-                    <h1>Laura loves to travel!</h1>
+                    <img class="circle-clip" src="images/hiking.png" alt="Laura climbing a tree stump">
+                    <h3>Laura loves to climb!</h3>
                     <p>I love being in nature, whether hiking in the mountains or kayaking down the salt river. I recently joined the bouldering scene and can't wait to try climbing outdoors!</p>
                 </div>
-                <div id="create">
-                    <img src="images/robots.png" alt="Laura using a drill press">
-                    <h1>Laura loves to create!</h1>
+                <div  id="create">
+                    <img class="circle-clip" src="images/robots.png" alt="Laura using a drill press">
+                    <h3>Laura loves to create!</h3>
                     <p>I was a part of DesertWAVE (Women in Autonomous Vehicle Engineering) for two years and learned how to CADD and solder. I helped to design a marker dropper and a grabber-arm for our underwater robot! After this time, my interests shifted to user experience and visual communications.</p>
                 </div>
                 <div id="seeThesis">
-                    <a href="thesis.html">See Laura's thesis ></a>
+                    <a href="thesis.html">See Laura's thesis</a>
                 </div>
+            </div>
+            <div id="mobileGallery">
+                <h2>Photo Gallery</h2>
+                <img src="images/tea.png" alt="Picture collage of Laura and her friends">
+                <img src="images/kayak.png" alt="Picture collage of Laura and her friends">
+                <img src="images/cats.png" alt="Picture collage of Laura and her friends">
+                <img src="images/climbing.png" alt="Picture collage of Laura and her friends">
+                <img src="images/homecoming.png" alt="Picture collage of Laura and her friends">
+                <img src="images/brunch.png" alt="Picture collage of Laura and her friends">
+                <img src="images/slander.png" alt="Picture collage of Laura and her friends">
             </div>
             <div id="gallery">
                 <img src="images/gallery.png" alt="Picture collage of Laura and her friends">
             </div>
         </main>
         <footer>
-            <div id="footercontact">
-                <p><small><a href="#">laura@roty.com</a></small></p>
-                <p><small><a href="#">480-639-8589</a></small></p>
-            </div>
-            <div id="footerlocation">
-                <p><small><a href="#">Tempe, Arizona</a></small></p>
-            </div>
-        </footer>
+            <p><small>laura@roty.com</small></p>
+            <p><small>480-639-8589</small></p>
+            <p><small>Tempe, Arizona</small></p>
+    </footer>
     </body>
 </html>

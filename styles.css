@@ -1,9 +1,61 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+  v2.0 | 20110126
+  License: none (public domain)
+  CSS RESET
+*/
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp, 
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   /* font: inherit; */
+   vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+   display: block;
+}
+/* body {
+   line-height: 1;
+} */
+blockquote, q {
+   quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+   content: '';
+   content: none;
+}
+table {
+   border-collapse: collapse;
+   border-spacing: 0;
+}
+/* end of CSS RESET */ 
+ 
+*{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
  html{
     background-color: #000000;
   } 
   body{
     background-color:#ffffff;
-    width: 370px;
+    width: 485px;
     margin: 0 auto;
   }
   
@@ -17,90 +69,409 @@
   p {font-size: 1.25em;}
   
   figcaption, label, input, small{
-    font-size: 1em;
+    font-size: .75em;
+  }
+  h1{
+    font-size: 2em
   }
   h2 {
-    font-size: 2em;
+    font-size: 1.75em;
   }
-  
-  h1, h2, h3, nav, figcaption{
-    text-transform: uppercase;
+  h3{
+    font-size: 1.5em;
   }
   
   #About h2, #Gallery h2{
     text-align: center;
   }
-  
+
   
   /* HEADER  */
-  header{
-    background-color: #ffffff;
-    padding: 0px;
-    margin-bottom: -14px;
-  }
-  
-  h1{
-    color: #000000;
-    padding: 0px;
-    margin: 0;
-    font-size: 3em;
-    padding: 6px;
-  }
-
-header img{
-    width: 150px;
-    height: 150px;
-}
-nav{
-    background-color:#000000;
-    text-decoration: none;
-    font-weight: bold;
-    text-transform:uppercase;
-    padding: 0px;
-    margin-bottom: -20px;
-  }
-  
-  nav a{
-    text-decoration: none;
-    color: #ffffff;
-    font-weight: bold;
-    font-size: 1.5em;
-    padding: 10px;
-  }
-  nav li{
-    display: inline-block;
-    padding:15px 20px;
-  }
-  
-  nav a:hover{
-    background-color: #007d7b;
-    border-radius:8px;
-    padding: 6px;
-  }
-[href="#top"] {
-    position:fixed;
-    bottom:0px;
-    right: 0px;
-    background-color: #007d7b;
-    color: #ffffff;
-    border-radius: 0px;
-  }
-  [href="#top"]:hover{
-    position:fixed;
-    bottom:0px;
-    right: 0px;
-    background-color: #ffffff;
-    color: #000000;
-    border-radius:10px 0 0px 0px;
-  }
-
-  #intro img{
-    width: 80%;
-    align-items: center;
-  }
-
-  #preview img{
-    width: 80%;
+  header img{
+    width: 15%;
     margin: 0 auto;
   }
+  header h1, header img{
+    display: flex;
+    justify-content: center;
+  }
 
+  header h1{
+    text-transform: uppercase;
+  }
+
+  /* nav */
+
+  nav{
+    background-color:#ffffff;
+    text-decoration: none;
+    text-transform:uppercase;
+    padding: 0px;
+    grid-row: 3;
+  }
+  
+  nav a {
+      font-size: 1.5em;
+      color: #000000;
+      text-transform: uppercase;
+      text-decoration: none;
+  }
+  
+nav li{
+    list-style:none;
+    padding:15px 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  nav li:hover{
+    background-color: #dedede;
+    color: #ffffff;
+  }
+  
+    nav ul {
+      background-color: #f0f0f0;
+      text-align: center;
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height .2s ease-out;
+  }
+  label {
+    cursor: pointer;
+    display: inline-block;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+label span {
+    background-color: #000000;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background-color .2s ease-out;
+    width: 24px;
+}
+label span:before, label span:after {
+    background: #000000;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+label span:before {
+    top: 5px;
+}
+label span:after {
+    top: -5px;
+}
+input {
+    display: none;
+}
+input:checked ~ ul {
+    max-height: 500px;
+}
+input:checked ~ label span {
+    background: transparent;
+}
+input:checked ~ label span:before {
+    transform: rotate(-45deg);
+}
+input:checked ~ label span:after {
+    transform: rotate(45deg);
+}
+input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
+    top: 0;
+}
+footer{
+  padding: 10px;
+  margin: 0px;
+  color: #000000;
+  background-color: #ffffff;
+  font-weight: bold;
+}
+ /* HOME PAGE */
+
+#intro{
+  padding: 12px;
+}
+  #intro img{
+    padding: 6px;
+    width: 90%;
+    align-items: center;
+  }
+ 
+   #intro h1{
+    display: inline-flex;
+   }
+   #intro p{
+    padding-right: 8px;
+   }
+  #intro h1, #intro p{
+    margin: 6px;
+  }
+  #toAbout a, #toThesis a{
+    width: 100px; 
+  }
+   #toAbout, #toThesis, #seeThesis a{
+    margin: 10px;
+    padding: 8px;
+   }
+
+   #seeThesis a, #toAbout a, #toThesis a{
+    color: #f3f3f3;
+    background-color:#101010;
+    padding: 6px;
+    border-radius: 2px;
+    font-size: 0.8em;
+    font-weight: bold;
+   }
+
+   #seeThesis a:hover, #toAbout a:hover, #toThesis a:hover{
+    background-color: #f3f3f3;
+    color: #000000;
+   }
+
+   #preview{
+    background-color: #efefef;
+   }
+
+   #preview h2{
+    padding-top: 12px;
+    padding-right: 12px;
+    padding-left: 12px;
+    padding-bottom: 6px;
+    margin: 4px;
+   }
+   #preview h3{
+    font-size: 1.25em;
+    padding-top: 6px;
+    padding-right: 12px;
+    padding-left: 12px;
+    padding-bottom: 4px;
+    margin: 4px;
+   }
+   #preview p{
+    padding-top: 6px;
+    padding-right: 12px;
+    padding-left: 12px;
+    padding-bottom: 6px;
+    margin: 8px;
+   }
+
+  #preview img{
+    width: 100%;
+    padding-top: 6px;
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-bottom: 6px;
+  }
+
+  #seeThesis{
+    padding-top: 2px;
+    padding-right: 12px;
+    padding-left: 12px;
+    padding-bottom: 18px;
+    text-align: right;
+  }
+  #aboutintro{
+    background-color: #efefef;
+    margin: 4px;
+   }
+   #aboutintro h1{
+    padding-top: 16px;
+    padding-right: 12px;
+    padding-left: 12px;
+    padding-bottom: 0px;
+    margin: 4px;
+   }
+
+   #aboutintro p{
+    padding-top: 2px;
+    padding-right: 12px;
+    padding-left: 12px;
+    padding-bottom: 12px;
+    margin: 8px;
+   }
+
+   #about{
+    padding: 16px;
+   }
+
+  #hiking, #create{
+    padding: 4px;
+   }
+
+   #seattle h3,#hiking h3, #create h3{
+    padding: 8px;
+   }
+
+   #seattle p, #hiking p,  #create p{
+    padding-top: 8px;
+    padding-right: 8px;
+    padding-left: 8px;
+    padding-bottom: 12px;
+
+   }
+
+   #about img{
+    width: 50%;
+    padding: 4px;
+   }
+
+   .circle-clip{
+    clip-path: circle(85px at center);
+   }
+
+   #mobileGallery{
+    background-color: #101010;
+    color: #ffffff;
+    margin: 0 auto;
+   }
+
+   #mobileGallery h2{
+    padding-top: 16px;
+    padding-right: 12px;
+    padding-left: 12px;
+    padding-bottom: 12px;
+    margin: 4px;
+   }
+   
+   #mobileGallery img{
+    width: 485px;
+   }
+
+   #gallery{
+    display: none;
+    line-height: 1px;
+   }
+/* THESIS PAGE */
+   #thesisAbout img{
+    width: 100%;
+   }
+
+   .scroll{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    overflow-x: auto;
+    overflow-y: hidden;
+    height: 300px;
+  }
+  .scroll section{
+    position: relative;
+  }
+  .scroll div{
+    position: absolute;
+    top: 250px;
+    background-color: #f4f4f4;
+    padding: 5px;
+    height: 50px;
+    width: 100%;
+  }
+  #redesigns ::-webkit-scrollbar {
+    width: 15px;
+}
+#redesigns ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 15px #dedede;
+}
+#redesigns ::-webkit-scrollbar-thumb {
+    background: #FFC627;
+    border-radius: 5px;
+}
+#redesigns ::-webkit-scrollbar-thumb:hover {
+    background: #a8872e;
+}
+#redesigns h2{
+  padding-top: 0px;
+  padding-right: 12px;
+  padding-left: 12px;
+  padding-bottom: 2px;
+  margin: 4px;
+  font-size: 1.5em;
+  font-style: italic;
+}
+
+#redesigns img{
+  height: 250px;
+}
+#redesigns h3{
+  color: #8C1D40;
+  text-align: left;
+  font-size: 1em;
+}
+#redesigns{
+  margin-top: 20px;
+}
+
+#thesisintro{
+  margin: 4px;
+ }
+ #thesisintro h1{
+  padding-top: 16px;
+  padding-right: 12px;
+  padding-left: 12px;
+  padding-bottom: 0px;
+  margin: 4px;
+ }
+
+ #thesisintro h2{
+  padding-top: 16px;
+  padding-right: 12px;
+  padding-left: 12px;
+  padding-bottom: 0px;
+  margin: 4px;
+  font-size: 1.5em;
+  font-style: italic;
+ }
+
+ #thesisintro p{
+  padding-top: 4px;
+  padding-right: 12px;
+  padding-left: 12px;
+  padding-bottom: 0px;
+  margin: 8px;
+ }
+
+ #thesisAbout{
+  background-color: #efefef;
+  padding-bottom: 0px;
+ }
+
+ #thesisAbout p{
+  padding-top: 2px;
+  padding-right: 12px;
+  padding-left: 12px;
+  padding-bottom: 12px;
+  margin: 8px;
+ }
+
+ /* STYLES for 834 */
+@media screen and (min-width:834px) {
+  body{
+    width: 834px;
+  }
+  #toAbout, #toThesis{
+    padding: 10px;
+  }
+  .circle-clip{
+    clip-path: circle(150px at center);
+   }
+   #seeThesis a{
+    font-size: 1em;
+   }
+   #mobileGallery img{
+    display: none;
+   }
+   #mobileGallery h2{
+    background-color: #ffffff;
+    color:#000000;
+    margin: 0 auto;
+   }
+   #gallery{
+    display: block;
+   }
+   #gallery img{
+    width: 834px;
+   }
+}
