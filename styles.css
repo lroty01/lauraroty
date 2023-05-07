@@ -199,8 +199,9 @@ footer{
   #intro img{
     padding: 6px;
     width: 90%;
-    align-items: center;
-  }
+  display: flex;  
+  justify-content: center;
+}
  
    #intro h1{
     display: inline-flex;
