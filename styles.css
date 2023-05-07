@@ -67,6 +67,8 @@ table {
 
   #toThesis{
     list-style: none;
+    display: flex;
+    justify-content: space-around;
   }
   
   /* TEXT & FONTS */
