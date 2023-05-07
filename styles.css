@@ -199,7 +199,7 @@ footer{
   #intro img{
     padding: 6px;
     width: 90%;
-  display: flex;  
+  display: block;  
   justify-content: center;
 }
  
