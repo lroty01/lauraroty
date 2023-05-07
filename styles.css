@@ -64,6 +64,10 @@ table {
     width: 98%;
     padding-bottom: 1px;
   }
+
+  li{
+    list-style: none;
+  }
   
   /* TEXT & FONTS */
   p {font-size: 1.25em;}
