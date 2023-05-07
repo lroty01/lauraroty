@@ -195,12 +195,12 @@ footer{
 
 #intro{
   padding: 12px;
+  width: 468px;
 }
   #intro img{
     padding: 6px;
     width: 90%;
-  display: block;  
-  justify-content: center;
+    margin: 16px;
 }
  
    #intro h1{
@@ -450,6 +450,9 @@ footer{
  /* STYLES for 834 */
 @media screen and (min-width:834px) {
   body{
+    width: 834px;
+  }
+  #intro{
     width: 834px;
   }
   #toAbout, #toThesis{
