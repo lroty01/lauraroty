@@ -65,10 +65,8 @@ table {
     padding-bottom: 1px;
   }
 
-  #toThesis{
+  #toAbout, #toThesis{
     list-style: none;
-    display: flex;
-    justify-content: space-around;
   }
   
   /* TEXT & FONTS */
@@ -200,12 +198,15 @@ footer{
  /* HOME PAGE */
 
 #intro{
-  padding: 12px;
+  padding-top: 0px;
+  padding-right: 6px;
+  padding-left: 6px;
+  padding-bottom: 0px;
   width: 468px;
 }
   #intro img{
     padding: 6px;
-    width: 80%;
+    width: 78%;
 }
  
    #intro h1{
@@ -222,7 +223,7 @@ footer{
   }
    #toAbout, #toThesis, #seeThesis a{
     margin: 10px;
-    padding: 8px;
+    padding: 4px;
    }
 
    #seeThesis a, #toAbout a, #toThesis a{
