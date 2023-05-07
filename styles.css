@@ -460,6 +460,7 @@ footer{
   }
   #intro{
     width: 834px;
+    padding: 0px;
   }
   #intro img{
     margin: 0 aut0;
