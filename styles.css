@@ -195,8 +195,7 @@ footer{
 
 #intro{
   padding: 12px;
-  display: flex;
-  justify-content: center;
+  margin: 4px;
 }
   #intro img{
     padding: 6px;
