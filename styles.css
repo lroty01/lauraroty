@@ -461,6 +461,9 @@ footer{
   #intro{
     width: 834px;
   }
+  #intro img{
+    width: 90%;
+  }
   #toAbout, #toThesis{
     padding: 10px;
   }
